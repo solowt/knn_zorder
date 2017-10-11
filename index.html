@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Find nearest features - 4.3</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+    #control-panel{
+      width: 300px;
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid black;
+      background: grey;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 10pt;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .input-hldr{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .mtop{
+      margin-top: 15px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css">
+  <script src="three.js"></script>
+  <script src="https://js.arcgis.com/4.5/"></script>
+  <script src="node_modules/s2-geometry/src/s2geometry.js"></script>
+</head>
+
+<body>
+  <div id="viewDiv">
+    <div id="control-panel">
+      <div class="input-hldr">
+        <input id="numgraphics" placeholder="Features to Add" type="number">
+        <button id="addbtn">Add</button>
+      </div>
+
+      <div class="input-hldr mtop">
+        <input id="numfind" type="number" placeholder="Features to Find (on click)">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
